@@ -44,7 +44,7 @@ public class Teste {
 		
 		array = aux;
 		inicio = System.currentTimeMillis();
-		merge.organizar(array,0,x);
+		merge.organizar(array);
 		fim = System.currentTimeMillis();
 		System.out.println("Merge Sort: " + exe.execucao(inicio,fim) +"segs");
 		
