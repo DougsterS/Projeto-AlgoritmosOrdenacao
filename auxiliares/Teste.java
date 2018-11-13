@@ -19,7 +19,7 @@ public class Teste {
 		tempoExecucao exe = new tempoExecucao();
 		int array[] = new int[x];
 		r.randomizar(array);
-		int aux[] = array;
+		int aux[] = array.clone();
 		long inicio;
 		long fim;
 		
@@ -30,25 +30,25 @@ public class Teste {
 		fim = System.currentTimeMillis();
 		System.out.println("Bubble Sort: " + exe.execucao(inicio,fim) + "segs");
 		
-		array = aux;
+		array = aux.clone();
 		inicio = System.currentTimeMillis();
 		selecao.organizar(array);
 		fim = System.currentTimeMillis();
 		System.out.println("Selection Sort: " + exe.execucao(inicio,fim) +"segs");
 		
-		array = aux;
+		array = aux.clone();
 		inicio = System.currentTimeMillis();
 		insercao.organizar(array);
 		fim = System.currentTimeMillis();
 		System.out.println("Insertion Sort: " + exe.execucao(inicio,fim) +"segs");
 		
-		array = aux;
+		array = aux.clone();
 		inicio = System.currentTimeMillis();
 		merge.organizar(array);
 		fim = System.currentTimeMillis();
 		System.out.println("Merge Sort: " + exe.execucao(inicio,fim) +"segs");
 		
-		array = aux;
+		array = aux.clone();
 		inicio = System.currentTimeMillis();
 		rapido.organizar(array);
 		fim = System.currentTimeMillis();
